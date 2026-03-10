@@ -44,4 +44,5 @@ Deployment
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/youtube-demo.git
+https://github.com/ChallaNarendra03/youtube-demo.git
+
