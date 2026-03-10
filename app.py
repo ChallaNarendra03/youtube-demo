@@ -86,10 +86,13 @@ def video(filename):
 @app.route("/delete/<filename>")
 def delete(filename):
 
-    path=os.path.join(UPLOAD_FOLDER,filename)
+    if "user" not in session:
+        return redirect("/")
 
-    if os.path.exists(path):
-        os.remove(path)
+    file_path = os.path.join("uploads", filename)
+
+    if os.path.exists(file_path):
+        os.remove(file_path)
 
     return redirect("/home")
 
